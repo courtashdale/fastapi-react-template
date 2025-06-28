@@ -6,14 +6,16 @@ function Home() {
 
   useEffect(() => {
     fetch('http://localhost:8000/api/hello')
-      .then(res => res.json())
-      .then(data => setMsg(data.message));
+      .then((res) => res.json())
+      .then((data) => setMsg(data.message));
   }, []);
 
   return (
     <div>
       <h1>Home Page</h1>
-      <p>Backend says: <strong>{msg}</strong></p>
+      <p>
+        Backend says: <strong>{msg}</strong>
+      </p>
     </div>
   );
 }
